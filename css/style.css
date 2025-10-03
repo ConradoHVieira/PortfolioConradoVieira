@@ -1,5 +1,5 @@
 *{
-    font-family: monospace;
+    font-family: monospace; /* fonte de meu gosto para todo o site */
     
 }
  
@@ -11,7 +11,7 @@
         }
         
         
-        
+        /* posicionamento correto do header no topo da pagina com largura total da página */
         header {
             background: #3b181d;
             padding-bottom: 10px;
@@ -21,15 +21,20 @@
             z-index: 1000;
             font-size: large;
         }
-        
+
+        header h1{
+            margin: 0;
+        }
+
+
         #sobre {
             background: 
-                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /*camada preta em cima da imagem para escurecer */
                 url("../img/aboutme.png") no-repeat center;  
             color: #fff;   
             background-size: cover;
             text-align: center;  
-            padding-top: 120px;
+            padding-top: 80px; /* padding do tamanho do header para evitar sobreposição */
         }
 
         #sobre p {
@@ -48,19 +53,25 @@
             padding: 0;
             color: #feb06a;
         }
+        
         #formacao {
-            background: off-white;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /*camada preta em cima da imagem para escurecer */
+                url("../img/formacao.png") no-repeat center;
             color: #feb06a;
             padding-top: 20px;
         }
 
+
         #formacao ul li{
-            padding: 25px 25px;
-            font-size: 20px;
+            padding: 25px 30px;
+            font-size: 16px;
         }
 
         #portfolio {
-            background: #cca382ce;
+           background: 
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* camada preta em cima da imagem para escurecer */
+                url("../img/portfolio.png") no-repeat center;
             color: #ffffff;
             padding-top: 20px; 
         }
@@ -75,7 +86,7 @@
             background: #fbfbfb;
             color: #feb06a;
             padding-top: 20px;
-            min-height: 55vh;
+            min-height: 60vh; /* definindo altura máxima da seção para eliminar desperdício de espaço */
         }
 
         header a {
@@ -111,7 +122,7 @@
         section {
           padding: 150px 50px;
           min-height: 100vh;
-          scroll-margin-top: 100px; 
+          scroll-margin-top: 87px; /* altura do header + 7px de margem para redirecionamento da ancora ficar alinhado com o texto */
           font-size: 16px;
         }
         section a{
@@ -128,7 +139,7 @@
             margin-bottom: 20px;
         }
 
-        /* ======== FORMULÁRIO ======== */
+        /*  fromatação e aplicação de estilos no formulário */
         form {
             max-width: 500px;
             margin: auto;
@@ -157,6 +168,7 @@
             background: #555;
         }
 
+        /* estilos do footer */
         footer {
             color: #eee;
             background-color: #3b181d;
@@ -168,6 +180,9 @@
             margin: 0;
         }
 
+        
+        /* aplicação de largura minima da página para responsividade */
+        
         @media (max-width: 768px) {
 
            
@@ -191,12 +206,12 @@
             }
         
             #contato {
-                min-height: auto;
+                min-height: 65vh;
             }
             
 
         }   
-        /* ======== TEMA ESCURO ======== */
+        /* aplicação de estilos do tema escuro */
         
         .dark-mode header{
             background-color: #000000;
@@ -209,15 +224,18 @@
         }
 
         .dark-mode header a {
-            color: rgb(255, 247, 25);
+            color: #256083;
         }
 
         .dark-mode #formacao {
-            background: #000000;
+            background: 
+                url("../img/formacao2.png") no-repeat center;
+        
             color: #ffffff;
         }
         .dark-mode #portfolio {
-            background: #380000;
+             background: 
+                url("../img/portfolio2.png") no-repeat center;
             color: #ffffff;
         }
         .dark-mode #contato {
@@ -232,11 +250,11 @@
         .dark-mode footer {
             background-color: #000000;
         }
-        /* ======== BOTÃO DE TEMA ======== */
+        /* estilos do botão toggle */
         .theme-toggle {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 25px;
+            right: 25px;
             background: #333;
             color: #fff;
             border: none;
@@ -244,5 +262,5 @@
             width: 50px;
             height: 50px;
             cursor: pointer;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
